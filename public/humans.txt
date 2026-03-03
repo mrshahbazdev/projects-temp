@@ -1,0 +1,7 @@
+Mark Martinaj
+contact@markmartinaj.com
+
+Built with Next.js, React, Tailwind CSS.
+Static export. No cookies. No tracking.
+
+DNSSEC, HSTS, CSP.

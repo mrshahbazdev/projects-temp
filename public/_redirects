@@ -1,0 +1,5 @@
+# Force HTTPS
+http://markmartinaj.com/* https://markmartinaj.com/:splat 301!
+
+# Redirect default Netlify subdomain
+https://markmartinaj.netlify.com/* https://markmartinaj.com/:splat 301!
