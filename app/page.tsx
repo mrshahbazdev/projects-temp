@@ -6,29 +6,22 @@ import Contact from '@/components/Contact'
 export default function Home() {
     return (
         <main className="min-h-screen px-6 md:px-12 lg:px-24 pb-22 flex justify-center bg-background">
-            <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 pt-12 md:pt-24">
+            <div className="max-w-2xl w-full flex flex-col justify-start pt-12 md:pt-24 items-center">
 
-                {/* Header, Index, Statement */}
-                <div className="lg:col-span-7 xl:col-span-7 flex flex-col justify-start order-1 lg:order-none">
-                    <Header />
+                <Header />
+
+                {/* Author Image - Centered and Circular */}
+                <div className="w-48 h-48 sm:w-56 sm:h-56 my-8">
+                    <img
+                        src="/8a749a919bfe518bb24d9647ec957683b89558ea.jpg"
+                        alt="Author Image"
+                        className="w-full h-full object-cover rounded-full shadow-md ring-1 ring-border"
+                    />
+                </div>
+
+                <div className="w-full max-w-[42rem] flex flex-col items-start">
                     <Index />
                     <Statement />
-                </div>
-
-                {/* Image Column */}
-                <div className="lg:col-span-5 xl:col-span-5 flex items-start justify-center lg:justify-end lg:pt-0 order-2 lg:order-none">
-                    <div className="sticky top-12 w-full max-w-sm">
-                        {/* Author Image */}
-                        <img
-                            src="/8a749a919bfe518bb24d9647ec957683b89558ea.jpg"
-                            alt="Author Image"
-                            className="w-full h-auto object-cover rounded shadow ring-1 ring-border aspect-[3/4] bg-neutral-100"
-                        />
-                    </div>
-                </div>
-
-                {/* Contact & Footer */}
-                <div className="lg:col-span-7 xl:col-span-7 flex flex-col justify-start order-3 lg:col-start-1 lg:order-none">
                     <Contact />
                 </div>
 
