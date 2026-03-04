@@ -18,9 +18,9 @@ export default function Home() {
                 {/* Image Column */}
                 <div className="lg:col-span-5 xl:col-span-5 flex items-start justify-center lg:justify-end pt-8 lg:pt-0">
                     <div className="sticky top-12 w-full max-w-sm">
-                        {/* Ensure you save your image as public/author.jpg */}
+                        {/* Author Image */}
                         <img
-                            src="/author.jpg"
+                            src="/8a749a919bfe518bb24d9647ec957683b89558ea.jpg"
                             alt="Author Image"
                             className="w-full h-auto object-cover rounded shadow ring-1 ring-border aspect-[3/4] bg-neutral-100"
                         />
