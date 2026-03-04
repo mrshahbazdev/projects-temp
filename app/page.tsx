@@ -7,16 +7,16 @@ export default function Home() {
     return (
         <main className="min-h-screen px-6 md:px-12 lg:px-24 pb-22 flex justify-center bg-background">
             <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 pt-12 md:pt-24">
-                {/* Content Column */}
-                <div className="lg:col-span-7 xl:col-span-7 flex flex-col justify-start">
+
+                {/* Header, Index, Statement */}
+                <div className="lg:col-span-7 xl:col-span-7 flex flex-col justify-start order-1 lg:order-none">
                     <Header />
                     <Index />
                     <Statement />
-                    <Contact />
                 </div>
 
                 {/* Image Column */}
-                <div className="lg:col-span-5 xl:col-span-5 flex items-start justify-center lg:justify-end pt-8 lg:pt-0">
+                <div className="lg:col-span-5 xl:col-span-5 flex items-start justify-center lg:justify-end lg:pt-0 order-2 lg:order-none">
                     <div className="sticky top-12 w-full max-w-sm">
                         {/* Author Image */}
                         <img
@@ -26,6 +26,12 @@ export default function Home() {
                         />
                     </div>
                 </div>
+
+                {/* Contact & Footer */}
+                <div className="lg:col-span-7 xl:col-span-7 flex flex-col justify-start order-3 lg:col-start-1 lg:order-none">
+                    <Contact />
+                </div>
+
             </div>
         </main>
     )
