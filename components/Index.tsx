@@ -9,11 +9,11 @@ export default function Index() {
     ]
 
     return (
-        <section className="prose-custom py-12 border-t border-border">
+        <section className="py-8 flex justify-center w-full">
             <nav aria-label="Areas of work">
-                <ul className="space-y-3">
+                <ul className="space-y-2 list-disc marker:text-primary pl-5">
                     {areas.map((area) => (
-                        <li key={area} className="text-base">
+                        <li key={area} className="text-base text-primary font-medium">
                             {area}
                         </li>
                     ))}

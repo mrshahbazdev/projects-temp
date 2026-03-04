@@ -1,11 +1,11 @@
 export default function Header() {
     return (
-        <header className="prose-custom pt-22 pb-18">
-            <div className="space-y-6">
-                <h1 className="text-3xl font-medium tracking-tight">
+        <header className="pb-8 w-full">
+            <div className="space-y-4 text-center">
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-primary">
                     Mark Martinaj
                 </h1>
-                <p className="text-lg text-muted">
+                <p className="text-lg md:text-xl text-muted">
                     Digital Governance &amp; Distributed Systems Architecture
                 </p>
             </div>
