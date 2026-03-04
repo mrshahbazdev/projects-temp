@@ -18,19 +18,12 @@ export default function Home() {
                 {/* Image Column */}
                 <div className="lg:col-span-5 xl:col-span-5 flex items-start justify-center lg:justify-end pt-8 lg:pt-0">
                     <div className="sticky top-12 w-full max-w-sm">
-                        {/* Adding a generic placeholder style while the user uploads their own author image */}
+                        {/* Ensure you save your image as public/author.jpg */}
                         <img
                             src="/author.jpg"
                             alt="Author Image"
-                            className="w-full h-auto object-cover rounded shadow ring-1 ring-border aspect-[3/4]"
-                            onError={(e) => {
-                                e.currentTarget.style.display = 'none';
-                                e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                            }}
+                            className="w-full h-auto object-cover rounded shadow ring-1 ring-border aspect-[3/4] bg-neutral-100"
                         />
-                        <div className="hidden w-full aspect-[3/4] bg-neutral-100 rounded shadow ring-1 ring-border flex items-center justify-center text-muted text-sm text-center px-4">
-                            Image placeholder.<br />Save your image as public/author.jpg
-                        </div>
                     </div>
                 </div>
             </div>
