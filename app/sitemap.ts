@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next'
 import { CONFIG } from '@/lib/constants'
 
+export const dynamic = 'force-static'
+
 const pages = [
     { path: '/', changeFreq: 'weekly' as const, priority: 1 },
     { path: '/rrugtimi/', changeFreq: 'monthly' as const, priority: 0.9 },
