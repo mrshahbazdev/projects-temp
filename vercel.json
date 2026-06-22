@@ -1,17 +1,4 @@
 {
-    "redirects": [
-        {
-            "source": "/:path*",
-            "has": [
-                {
-                    "type": "host",
-                    "value": "markmartinaj.vercel.app"
-                }
-            ],
-            "destination": "https://markmartinaj.com/:path*",
-            "permanent": true
-        }
-    ],
     "headers": [
         {
             "source": "/:path*",
@@ -42,7 +29,7 @@
                 },
                 {
                     "key": "Content-Security-Policy",
-                    "value": "default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self' data:; font-src 'none'; connect-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests"
+                    "value": "default-src 'none'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'none'; connect-src 'self' https://formspree.io https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; frame-ancestors 'none'; base-uri 'none'; form-action 'self' https://formspree.io; upgrade-insecure-requests"
                 },
                 {
                     "key": "Cross-Origin-Embedder-Policy",

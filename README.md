@@ -1,6 +1,8 @@
-# MarkMartinaj.com
+# MarjanaKoceku.com
 
-Digital Governance & Distributed Systems Architecture
+Personal website for Marjana Ko&#231;eku &#8212; independent MP for Shkod&#235;r County, from Dukagjin.
+
+Bilingual (Albanian / English), static Next.js export.
 
 ## Quick Start
 
@@ -10,35 +12,29 @@ npm run build
 npm run dev   # development server
 ```
 
-## Feature Toggles
-
-Edit `lib/constants.ts`:
-
-| Feature | Default | Description |
-|---------|---------|-------------|
-| `PICTURE_ENABLED` | `false` | Profile picture display |
-| `GDPR_ENABLED` | `true` | GDPR compliance (always on) |
-| `ANALYTICS_ENABLED` | `false` | Privacy-focused analytics (Plausible) |
-| `CONTACT_FORM_ENABLED` | `false` | Contact form (increases attack surface) |
-| `DARK_MODE_ENABLED` | `false` | Dark mode toggle |
-| `SERVICE_WORKER_ENABLED` | `false` | Offline capability |
-
-## Enable Profile Picture
-
-1. Set `PICTURE_ENABLED: true` in `lib/constants.ts`
-2. Add `profile.jpg` (512x512px, <50KB) to `/public/`
-3. Rebuild: `npm run build`
-
 ## Project Structure
 
 ```
-app/            → Next.js app router (layout, pages, robots, sitemap)
-components/     → React components (Header, Index, Statement, Contact, Schema, Picture)
-lib/            → Constants and utilities (feature flags, GDPR config, SEO config)
-public/         → Static assets (favicon, humans.txt, ai.txt, .well-known/, sw.js)
-.github/        → CI/CD (dependabot, deploy workflow)
-scripts/        → Build utilities (size-check)
+app/            &#8594; Next.js app router (SQ pages at root, EN pages under /en/)
+components/     &#8594; Shared React components (Header, Navigation, Footer, ContactForm, PageLayout)
+lib/            &#8594; Constants, i18n translations, schema
+public/         &#8594; Static assets (images, favicon, .well-known/, robots.txt, ai.txt)
+.github/        &#8594; CI/CD (dependabot, deploy workflow)
+scripts/        &#8594; Build utilities (size-check)
 ```
+
+## Pages
+
+| Path | SQ | EN |
+|------|----|----|
+| Home | `/` | `/en/` |
+| Rrug&#235;timi / My Story | `/rrugtimi/` | `/en/rrugtimi/` |
+| NeoMalsore | `/neomalsore/` | `/en/neomalsore/` |
+| N&#8217;Parlament / Parliament | `/parlament/` | `/en/parlament/` |
+| Media / Press | `/media/` | `/en/media/` |
+| Kontakt / Contact | `/kontakt/` | `/en/kontakt/` |
+| Siguria / Security | `/siguria/` | `/en/siguria/` |
+| Privat&#235;sia / Privacy | `/privatesia/` | `/en/privatesia/` |
 
 ## Deploy
 
@@ -47,7 +43,6 @@ scripts/        → Build utilities (size-check)
 2. Connect repo in Cloudflare Pages dashboard
 3. Build command: `npm run build`
 4. Output directory: `dist`
-5. Add `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` to GitHub secrets
 
 ### Vercel
 1. Import project
@@ -55,42 +50,16 @@ scripts/        → Build utilities (size-check)
 3. Build command: `npm run build`
 4. Output directory: `dist`
 
-### Netlify
-- `public/_redirects` and `public/_headers` are pre-configured
-
 ## Security
 
-- DNSSEC: Enable at your registrar
-- HSTS preload: Submit at https://hstspreload.org
-- CSP: No external resources loaded
 - Static export: Zero server-side execution
+- HSTS preload enabled
+- CSP: No external resources except Formspree and Cloudflare Turnstile
+- No cookies, no tracking
 
 ## GDPR
 
 - No cookies
-- No tracking (unless `ANALYTICS_ENABLED: true`)
-- Server log retention: 7 days
-- Data controller: contact@markmartinaj.com
-
-## Post-Deployment Checklist
-
-- [ ] Add photo: set `PICTURE_ENABLED: true` + upload `/public/profile.jpg`
-- [ ] Add `SEO.verification.google` (Search Console)
-- [ ] Add `SEO.verification.bing` (Bing Webmaster Tools)
-- [ ] Add social profiles to `SEO.sameAs`
-- [ ] Add GitHub secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`
-- [ ] Enable DNSSEC at registrar
-- [ ] Submit HSTS preload request
-- [ ] Register with Google Search Console
-- [ ] Register with Bing Webmaster Tools
-- [ ] Update `security.txt` Expires date annually
-
-## Performance Targets
-
-| Metric | Target |
-|--------|--------|
-| Page weight | < 50KB |
-| LCP | < 1.2s |
-| FCP | < 800ms |
-| TTFB | < 200ms |
-| Lighthouse | 100 |
+- No tracking
+- Contact form data used only to reply
+- Data controller: contact@marjanakoceku.com
