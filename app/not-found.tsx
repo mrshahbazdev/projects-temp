@@ -12,11 +12,6 @@ export default function NotFound() {
                 >
                     Return to index
                 </Link>
-
-                {/* GDPR: No error tracking */}
-                <p className="text-xs text-muted mt-8">
-                    Error logged for security purposes only. No personal data collected.
-                </p>
             </div>
         </main>
     )

@@ -1,0 +1,31 @@
+User-Agent: *
+Allow: /
+Disallow: /_next/
+Disallow: /api/
+
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: anthropic-ai
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: Googlebot
+Allow: /
+
+User-Agent: Bingbot
+Allow: /
+
+Host: https://marjanakoceku.com
+Sitemap: https://marjanakoceku.com/sitemap.xml

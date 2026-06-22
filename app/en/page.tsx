@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import { CONFIG } from '@/lib/constants'
-import { sq } from '@/lib/i18n'
+import { en } from '@/lib/i18n'
 import PageLayout from '@/components/PageLayout'
 import Header from '@/components/Header'
+
+const url = CONFIG.siteUrl
 
 const breadcrumb = JSON.stringify({
     '@context': 'https://schema.org',
@@ -10,31 +12,31 @@ const breadcrumb = JSON.stringify({
         {
             '@type': 'BreadcrumbList',
             itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Kryefaqja', item: `${CONFIG.siteUrl}/` },
+                { '@type': 'ListItem', position: 1, name: 'Home', item: `${url}/en/` },
             ],
         },
         {
             '@type': 'WebPage',
-            '@id': `${CONFIG.siteUrl}/#webpage`,
-            name: 'Kryefaqja',
-            url: `${CONFIG.siteUrl}/`,
-            description: sq.description,
-            inLanguage: 'sq-AL',
-            isPartOf: { '@id': `${CONFIG.siteUrl}/#website` },
-            about: { '@id': `${CONFIG.siteUrl}/#person` },
+            '@id': `${url}/en/#webpage`,
+            name: 'Home',
+            url: `${url}/en/`,
+            description: en.description,
+            inLanguage: 'en',
+            isPartOf: { '@id': `${url}/#website` },
+            about: { '@id': `${url}/#person` },
         },
     ],
 })
 
-export default function Home() {
+export default function EnHome() {
     return (
-        <PageLayout t={sq} currentPath="/" breadcrumbSchema={breadcrumb}>
-            <Header name="Marjana Ko&#231;eku" subtitle={sq.subtitle} />
+        <PageLayout t={en} currentPath="/en/" breadcrumbSchema={breadcrumb}>
+            <Header name="Marjana Ko&#231;eku" subtitle={en.subtitle} />
 
             <div className="w-48 h-48 sm:w-56 sm:h-56 my-8 ">
                 <img
                     src="/profile.jpg"
-                    alt={sq.ogImageAlt}
+                    alt={en.ogImageAlt}
                     width={224}
                     height={224}
                     loading="eager"
@@ -48,24 +50,23 @@ export default function Home() {
                 <section className="py-6 w-full">
                     <div className="space-y-6 text-[15px] leading-relaxed text-[#4a4a4a]">
                         <p>
-                            Jam rrit&#235; mes maleve t&#235; Dukagjinit. Aty m&#235;sova me e dasht&#235; vendin,
-                            me e respektu fjal&#235;n e dh&#235;n&#235; dhe me e kuptu se sh&#235;rbimi ndaj njer&#235;zve
-                            fillon gjithmon&#235; pran&#235; komunitetit, jo larg tij.
+                            I grew up in the mountains of Dukagjin. That is where I learned to love my country,
+                            keep my word, and understand that public service starts with the community around you,
+                            not in a distant office.
                         </p>
                         <p>
-                            S&apos;hyra n&apos;politik&#235; p&#235;r titull. Hyna sepse besoj se z&#235;ri i Mal&#235;sis&#235;
-                            duhet me u d&#235;gju aty ku merren vendimet, me dinjitet, me pun&#235; dhe
-                            me lidhje t&#235; v&#235;rtet&#235; me tok&#235;n q&#235; na ka rritur.
+                            I did not enter politics for a title. I entered because the people of Mal&#235;sia
+                            deserve to be heard where laws are made, and heard with dignity and honest work.
                         </p>
                     </div>
                 </section>
 
                 <section className="py-6 w-full">
                     <Link
-                        href="/rrugtimi/"
+                        href="/en/rrugtimi/"
                         className="text-[15px] text-[#2c2c2c] hover:underline transition-colors"
                     >
-                        {sq.readStory} &rarr;
+                        {en.readStory} &rarr;
                     </Link>
                 </section>
             </div>
